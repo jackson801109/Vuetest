@@ -38,12 +38,12 @@
             aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{ product.title }}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{ product.title }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                    </div>
                 <div class="modal-body">
                     <img :src="product.imageUrl" class="img-fluid" alt="">
                     <blockquote class="blockquote mt-3">
@@ -51,14 +51,14 @@
                     <footer class="blockquote-footer text-right">{{ product.description }}</footer>
                     </blockquote>
                     <div class="d-flex justify-content-between align-items-baseline">
-                    <div class="h4" v-if="!product.price">{{ product.origin_price }} 元</div>
-                    <del class="h6" v-if="product.price">原價 {{ product.origin_price }} 元</del>
-                    <div class="h4" v-if="product.price">現在只要 {{ product.price }} 元</div>
+                        <div class="h4" v-if="!product.price">{{ product.origin_price }} 元</div>
+                        <del class="h6" v-if="product.price">原價 {{ product.origin_price }} 元</del>
+                        <div class="h4" v-if="product.price">現在只要 {{ product.price }} 元</div>
                     </div>
                     <select name="" class="form-control mt-3" v-model="product.num">
-                    <option :value="num" v-for="num in 10" :key="num">
-                        選購 {{num}} {{product.unit}}
-                    </option>
+                        <option :value="num" v-for="num in 10" :key="num">
+                            選購 {{num}} {{product.unit}}
+                        </option>
                     </select>
                 </div>
                 <div class="modal-footer">
@@ -112,14 +112,14 @@
             </tfoot>
             </table>
             <div class="input-group mb-3 input-group-sm">
-            <input type="text" class="form-control" v-model="coupon_code" placeholder="請輸入優惠碼">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" @click="addCouponCode">
-                套用優惠碼
-                </button>
-                    </div>
-                </div>        
-            </div>
+                <input type="text" class="form-control" v-model="coupon_code" placeholder="請輸入優惠碼">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" @click="addCouponCode">
+                        套用優惠碼
+                    </button>
+                </div>
+            </div>        
+        </div>
             
         </div>
         <div class="my-5 row justify-content-center">
@@ -218,7 +218,7 @@
                     </div>
                 </form>
             </validation-observer>
-            </div>
+        </div>
     </div>
 </template>
 
